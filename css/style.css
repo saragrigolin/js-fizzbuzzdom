@@ -6,4 +6,48 @@
 
 html {
     font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #053a4b;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding: 2em 0 1em 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightblue {
+    background-color: #2596be;
+}
+
+.green {
+    background-color: #08d4a4;
+}
+
+.yellow {
+    background-color: #ffd46c;
+}
+
+.magenta {
+    background-color: #f84c74;
 }
