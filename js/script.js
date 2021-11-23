@@ -33,24 +33,24 @@ for (i = 1; i <= 100; i++) {
     div.classList.add('box', 'box--' + i);
 
     //creo if per le condizioni dei multipli
-    if (i % 3 == 0 && i % 5 !== 0) { //resto == 0 allora multiplo di 3
-        console.log('Frizz');
-
-        //inserisco nei div la scritta 'Frizz' e aggiungo la classe colorata
-        div.append('Frizz');
-        div.classList.add('green');
-    } else if (i % 3 !== 0 && i % 5 == 0) { //resto == 0 allora multiplo di 5
-        console.log('Buzz');
-
-        //inserisco nei div la scritta 'Buzz' e aggiungo la classe colorata
-        div.append('Buzz');
-        div.classList.add('yellow');
-    } else if (i % 3 == 0 && i % 5 == 0) { //multipli di 15
+    if (i % 3 == 0 && i % 5 == 0) { //multipli di 15
         console.log('FrizzBuzz');
 
         //inserisco nei div la scritta 'FrizzBuzz' e aggiungo la classe colorata
         div.append('FrizzBuzz');
         div.classList.add('magenta');
+    } else if (i % 3 == 0) { //resto == 0 allora multiplo di 3
+        console.log('Frizz');
+
+        //inserisco nei div la scritta 'Frizz' e aggiungo la classe colorata
+        div.append('Frizz');
+        div.classList.add('green');
+    } else if (i % 5 == 0) { //resto == 0 allora multiplo di 5
+        console.log('Buzz');
+
+        //inserisco nei div la scritta 'Buzz' e aggiungo la classe colorata
+        div.append('Buzz');
+        div.classList.add('yellow');
     } else {
         console.log(i);
         
