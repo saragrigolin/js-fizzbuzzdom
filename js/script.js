@@ -19,20 +19,43 @@ Consigli del giorno:
 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo “a mano”
 Buon lavoro e buon divertimento! */
 
-// Scrivo un programma che stampi in console i numeri da 1 a 100
+
+//creo le variabili per l'incremento e il container
 let i;
+const container = document.querySelector('.container');
 
 //creo ciclo for da 1 a 100
 for (i = 1; i <= 100; i++) {
 
+    //creo costante div e la inserisco nel container, a cui do poi classe box e box--i
+    const div = document.createElement('div');
+    container.append(div);
+    div.classList.add('box', 'box--' + i);
+
     //creo if per le condizioni dei multipli
     if (i % 3 == 0 && i % 5 !== 0) { //resto == 0 allora multiplo di 3
         console.log('Frizz');
+
+        //inserisco nei div la scritta 'Frizz' e aggiungo la classe colorata
+        div.append('Frizz');
+        div.classList.add('green');
     } else if (i % 3 !== 0 && i % 5 == 0) { //resto == 0 allora multiplo di 5
         console.log('Buzz');
+
+        //inserisco nei div la scritta 'Buzz' e aggiungo la classe colorata
+        div.append('Buzz');
+        div.classList.add('yellow');
     } else if (i % 3 == 0 && i % 5 == 0) { //multipli di 15
         console.log('FrizzBuzz');
+
+        //inserisco nei div la scritta 'FrizzBuzz' e aggiungo la classe colorata
+        div.append('FrizzBuzz');
+        div.classList.add('magenta');
     } else {
         console.log(i);
+        
+        //inserisco nei div i numeri restanti e aggiungo la classe colorata
+        div.append(i);
+        div.classList.add('lightblue');
     }
 }
